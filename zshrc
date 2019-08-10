@@ -68,3 +68,4 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 autoload -U promptinit; promptinit
 prompt pureexport BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
