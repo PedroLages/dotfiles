@@ -2,7 +2,8 @@ ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="cobalt2"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+export DEFAULT_USER="$(whoami)"
 
 # Useful plugins for Rails development with Sublime Text
 plugins=(gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
@@ -30,7 +31,40 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+autoload -U add-zsh-hook
+# Zsh hook function
+load-nvmrc() {
+    local node_version="$(nvm version)" # Current node version
+    local nvmrc_path="$(nvm_find_nvmrc)" # Path to the .nvmrc file
+
+    # Check if there exists a .nvmrc file
+    if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    # Check if the node version in .nvmrc is installed on the computer
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+        # Install the node version in .nvmrc on the computer and switch to that node version
+        nvm install
+    # Check if the current node version matches the version in .nvmrc
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+        # Switch node versions
+        nvm use
+    fi
+    # If there isn't an .nvmrc make sure to set the current node version to the default node version
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+    fi
+}
+
+# Add the above function when the present working directory (pwd) changes
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
+autoload -U promptinit; promptinit
+prompt pureexport BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
