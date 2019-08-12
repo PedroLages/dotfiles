@@ -8,14 +8,22 @@
 		"A File Icon",
 		"AdvancedNewFile",
 		"All Autocomplete",
+		"ayu",
 		"Babel",
+		"BracketHighlighter",
+		"CSS Primer",
+		"DocBlockr",
 		"Emmet",
 		"ERB Snippets",
+		"FileIcons",
 		"Git",
 		"GitGutter",
+		"Glue",
 		"Package Control",
+		"RSpec",
 		"SCSS",
 		"SublimeLinter",
-		"SublimeLinter-rubocop"
+		"SublimeLinter-rubocop",
+		"Theme - Primer"
 	]
 }
