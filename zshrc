@@ -2,11 +2,12 @@ ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 export DEFAULT_USER="$(whoami)"
 
 # Useful plugins for Rails development with Sublime Text
-plugins=(gitfast last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
+plugins=(gitfast ruby last-working-dir common-aliases sublime zsh-syntax-highlighting history-substring-search)
 
 # Prevent Homebrew from reporting - https://github.com/Homebrew/brew/blob/master/share/doc/homebrew/Analytics.md
 export HOMEBREW_NO_ANALYTICS=1
@@ -15,7 +16,7 @@ export HOMEBREW_NO_ANALYTICS=1
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
 
-# Load rbenv if installed
+# # Load rbenv if installed
 export PATH="${HOME}/.rbenv/bin:${PATH}"
 type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
@@ -31,7 +32,6 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -68,3 +68,5 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 autoload -U promptinit; promptinit
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+autoload -U promptinit; promptinit
+prompt pureexport BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"

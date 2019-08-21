@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": false,
 	"auto_complete": true,
 	"auto_complete_commit_on_tab": true,
-	"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Palenight.tmTheme",
 	"copy_with_empty_selection": true,
 	"detect_indentation": false,
 	"draw_white_space": true,
@@ -24,7 +24,7 @@
 		"coverage"
 	],
 	"font_face": "'FiraCode-Retina'",
-	"font_size": 19,
+	"font_size": 21,
 	"highlight_modified_tabs": true,
 	"hot_exit": false,
 	"ignored_packages":
@@ -38,7 +38,7 @@
 		80
 	],
 	"tab_size": 2,
-	"theme": "ayu-mirage.sublime-theme",
+	"theme": "Agila Dracula.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,

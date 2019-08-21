@@ -7,9 +7,11 @@
 	[
 		"A File Icon",
 		"AdvancedNewFile",
+		"Agila Theme",
 		"All Autocomplete",
 		"ayu",
 		"Babel",
+		"BorkFilesSyntaxHighlighting",
 		"BracketHighlighter",
 		"CSS Primer",
 		"DocBlockr",
@@ -19,11 +21,15 @@
 		"Git",
 		"GitGutter",
 		"Glue",
+		"Icon Fonts",
+		"Material Theme",
+		"Monokai - Spacegray",
 		"Package Control",
 		"RSpec",
 		"SCSS",
 		"SublimeLinter",
 		"SublimeLinter-rubocop",
+		"Theme - Brogrammer",
 		"Theme - Primer"
 	]
 }
