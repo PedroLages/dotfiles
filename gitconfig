@@ -50,7 +50,7 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = pedrocamposlages
+	email = pedrocamposlages@gmail.com
 	name = Pedro Lages
 	mail = pedrocamposlages@gmail.com
 [filter "lfs"]
