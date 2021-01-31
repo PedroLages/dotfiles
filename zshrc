@@ -110,3 +110,5 @@ source /Users/pedro/.zsh/aliases.zsh
 eval "$(starship init zsh)"
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
 eval "$(starship init zsh)"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+eval "$(starship init zsh)"
