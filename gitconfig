@@ -50,8 +50,8 @@
 [branch "master"]
   mergeoptions = --no-edit
 [user]
-	email = pedrocamoslages@gmail.com
-	name = Pedro Lages
+	email = pedrocamposlages@gmail.com
+	name = PedroLages
 	mail = pedrocamposlages@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
