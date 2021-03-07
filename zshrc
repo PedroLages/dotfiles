@@ -96,3 +96,4 @@ alias ls='ls -G'
 source /Users/pedro/.zsh/key-bindings.zsh
 source /Users/pedro/.zsh/aliases.zsh
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl' -a"
