@@ -51,7 +51,7 @@
   mergeoptions = --no-edit
 [user]
 	email = pedrocamposlages@gmail.com
-	name = Pedro Laged
+	name = Pedro Lages
 	mail = pedrocamposlages@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
